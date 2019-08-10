@@ -9,7 +9,7 @@ function check(){
   var rad = document.getElementsByName('radio');
     for (var i = 0; i<rad.length; i++){
       if (rad[0].checked){
-        alert('len');
+        linear_equation();
         break;
       }
       if(rad[1].checked){
@@ -18,9 +18,21 @@ function check(){
       }
     }
   }
-/*function linear_equation(){
-
-}*/
+function linear_equation(){
+  var a = document.square.square_a.value;
+  var b = document.square.square_b.value;
+  var sol = document.getElementById("square_sol");
+    if ( (a==0) && (b==0)){
+      string = 'Решений бесконечно много';
+    }
+    if ((a==0) && !(b==0)){
+      string = 'нет решения';
+    }
+    if(!(a==0)){
+      string = -b/a;
+    }
+    sol.innerHTML = string;
+}
 function clearout(){
   document.forms[0].reset()
    document.forms[0].square_a.value=""
