@@ -9,11 +9,12 @@ INPUT, SELECT {font-size:14pt}
 </head>
 <body style="font-size:12pt" >
 <form name="square" action="javascript:square_equation()">
-        <input name = "radio" type="radio" value="lin">Линейное уравнение
-        <input name = "radio" type="radio" value="gua">Квадратное уравнение
+        <input name = "radio" type="radio" value="lin" onclick="cl()">Линейное уравнение
+        <input name = "radio" type="radio" onclick ="cl1()" value="gua">Квадратное уравнение
                 a <input name="square_a" type="text" value="1" size="4">
                 b <input name="square_b" type="text" value="2" size="4">
-                c <input name="square_c" type="text" value="1" size="4">
+                c <input id = 'square' name="square_c" type="text" value="1" size="4">
+                <input name="" type="button" value="Очистить" onClick="clearout()">
                 <input type="submit" value="посчитать" onclick="check()" >
                 </form>
                 

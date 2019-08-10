@@ -1,8 +1,15 @@
+document.forms[0].reset();
+function cl(){
+  document.getElementById('square').disabled = true; 
+}
+function cl1(){
+document.getElementById('square').disabled = false;
+}
 function check(){
   var rad = document.getElementsByName('radio');
     for (var i = 0; i<rad.length; i++){
       if (rad[0].checked){
-        alert('Линейное');
+        alert('len');
         break;
       }
       if(rad[1].checked){
@@ -11,6 +18,15 @@ function check(){
       }
     }
   }
+/*function linear_equation(){
+
+}*/
+function clearout(){
+  document.forms[0].reset()
+   document.forms[0].square_a.value=""
+   document.forms[0].square_b.value=""
+   document.forms[0].square_c.value=""
+}
 function square_equation() {
   var a = document.square.square_a.value;
   var b = document.square.square_b.value;
