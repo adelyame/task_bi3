@@ -10,11 +10,11 @@ function check(){
     for (var i = 0; i<rad.length; i++){
       if (rad[0].checked){
         linear_equation();
-        break;
+        
       }
       if(rad[1].checked){
         square_equation();
-        break;
+        
       }
     }
   }
