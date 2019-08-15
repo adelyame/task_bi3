@@ -2,11 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+    <style>
+    input{
+        display: flex;
+    flex-flow: column wrap;
+        font-size: 20px;
+    }
+
+    </style>
 <body>
+<form name = "functionGraph">
+    
+    a <input name = 'a' type="number" size = '5'>
+    b <input name = 'b' type="number" size = '5'>
+    c <input name = 'c' type="number" size = '5'>
+    d <input name = 'd' type="number" size = '5'>
+    e <input name = 'e' type="number" size = '5'>
+     x начальная <input name = 'x0' type="number" size = '5'>
+     x конечная <input name = 'x1' type="number" size = '5'>
+        <input id="graphic" type="button" value = 'Построить график' onclick="drawChart()">
+        <div id="curve_chart" style="width: 900px; height: 500px"></div>
+    
+</form>
+    <script src = './z3.js'></script>
     
 </body>
 </html>
