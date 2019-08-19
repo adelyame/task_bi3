@@ -6,8 +6,8 @@ function cl1(){
 document.getElementById('square').disabled = false;
 }
 function check(){
-  var rad = document.getElementsByName('radio');
-    for (var i = 0; i<rad.length; i++){
+  let rad = document.getElementsByName('radio');
+    for (let i = 0; i<rad.length; i++){
       if (rad[0].checked){
         linear_equation();
         
@@ -19,9 +19,9 @@ function check(){
     }
   }
 function linear_equation(){
-  var a = document.square.square_a.value;
-  var b = document.square.square_b.value;
-  var sol = document.getElementById("square_sol");
+  let a = document.square.square_a.value;
+  let b = document.square.square_b.value;
+  let sol = document.getElementById("square_sol");
     if ( (a==0) && (b==0)){
       string = 'Решений бесконечно много';
     }
@@ -40,12 +40,12 @@ function clearout(){
    document.forms[0].square_c.value=""
 }
 function square_equation() {
-  var a = document.square.square_a.value;
-  var b = document.square.square_b.value;
-  var c = document.square.square_c.value;
-  var sol = document.getElementById("square_sol");
+  let a = document.square.square_a.value;
+  let b = document.square.square_b.value;
+  let c = document.square.square_c.value;
+  let sol = document.getElementById("square_sol");
 
-  var d = b * b - 4 * a * c;
+  let d = b * b - 4 * a * c;
   if ( d < 0 ) {
     string = "пара комплексно-сопряженных корней<br>x<sub>1</sub> = (";
     string += - b / ( 2 * a );

@@ -1,17 +1,17 @@
 function func(a) {
 
-    var result = [0, 1];
-    for (var i = 2; i <a; i++) {
+    let result = [0, 1];
+    for (let i = 2; i <a; i++) {
         result[i] =result[i-1] + result[i-2];
 
     }return result;
 }
 function prime(a){
-    var result = [];
+    let result = [];
     nextPrime:
-    for (var i = 2; i <a; i++) { // Для всех i...
+    for (let i = 2; i <a; i++) { // Для всех i...
 
-        for (var j = 2; j < i; j++) { // проверить, делится ли число..
+        for (let j = 2; j < i; j++) { // проверить, делится ли число..
           if (i % j == 0) continue nextPrime;
           // не подходит, берём следующее
           
@@ -22,7 +22,7 @@ function prime(a){
 }
 
 function fibonacci(){
-    var answer = +prompt('Введите количество чисел');
+    let answer = +prompt('Введите количество чисел');
     if (Number.isInteger(answer)){
         alert(func(answer)); 
 
@@ -33,7 +33,7 @@ function fibonacci(){
     
 }
 function primeNumber(){
-    var answer = +prompt('Введите количество чисел');
+    let answer = +prompt('Введите количество чисел');
     if (Number.isInteger(answer)){
         alert(prime(answer)); 
 
