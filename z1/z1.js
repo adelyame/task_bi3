@@ -45,6 +45,9 @@ function square_equation() {
   let c = document.square.square_c.value;
   let sol = document.getElementById("square_sol");
 
+  if(a == 0){
+    alert('Коэффициент при первом слагаемом уравнения не может быть равным нулю, измените и попробуйте снова');
+  } else {
   let d = b * b - 4 * a * c;
   if ( d < 0 ) {
     string = "пара комплексно-сопряженных корней<br>x<sub>1</sub> = (";
@@ -68,6 +71,6 @@ function square_equation() {
         string += -b / ( 2 * a ) + Math.sqrt( d ) / ( 2 * a );
         string += ".";
       }
-  }
+  }}
   sol.innerHTML = string;
 }
