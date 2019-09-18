@@ -11,11 +11,13 @@ function letsCalculate(){
   let arr = [];
   arr.push(['x','fx']);
   for (let i = x0;i<=x1; i++){
-    fx = a* Math.pow(i,4) + b*Math.pow(i,3) + c*Math.pow(i, 2) + d*i + e;
+    fx = a* Math.pow(+i,4) + b*Math.pow(+i,3) + c*Math.pow(+i, 2) + d*+i + +e;
     arr.push([+i,+fx]);
+    console.log(+i,+fx);
   }
   return arr;
 }
+
 function drawChart() {
   let a = letsCalculate();
   let data = google.visualization.arrayToDataTable(a);
